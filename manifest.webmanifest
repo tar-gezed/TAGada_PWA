@@ -1,0 +1,39 @@
+{
+    "name": "TAGada",
+    "short_name": "TAGada",
+    "description": "Affiche les prochains passages de bus/tram pour une ligne et un arrêt choisis",
+    "orientation": "any",
+    "display": "standalone",
+    "dir": "auto",
+    "lang": "fr-FR",
+    "start_url": "/index.html",
+    "theme_color": "#d42e11",
+    "background_color": "#f8f3e7",
+    "icons": [
+      {
+        "src": "/icons/icon128.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/icon128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/icon16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/icon32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/icon48.png",
+        "sizes": "48x48",
+        "type": "image/png"
+      }
+    ]
+  }
