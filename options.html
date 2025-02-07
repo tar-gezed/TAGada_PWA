@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter Favoris - Horaires Bus/Tram</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="manifest" href="/manifest.webmanifest">
-    <meta name="theme-color" content="#333">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <meta name="theme-color" content="#d42e11">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -133,12 +133,34 @@
             color: #007bff;
             text-decoration: underline;
         }
+
+        .nav-button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0 16px 0 0;
+        }
+        
+        .nav-button i {
+            font-size: 24px;
+            color: black;
+        }
+
+        .nav-button:hover i {
+            color: #333;
+        }
+
+        #title-container {
+            display: flex;
+        }
     </style>
 </head>
 
 <body>
 
-    <h1>Ajouter un Favori</h1>
+    <div id="title-container">
+        <h1>Ajouter un Favori</h1>
+    </div>
 
     <div class="container">
         <!-- Bloc de gauche : Sélection de la ligne -->

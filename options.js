@@ -5,24 +5,26 @@ document.addEventListener('DOMContentLoaded', function () {
     loadFavorites();
     fetchData('https://data.mobilites-m.fr/api/routers/default/index/routes', initializeLineData);
 
-    const backButton = document.createElement('div');
-    backButton.className = 'back-button hidden';
+    const backButton = document.createElement('button');
+    backButton.className = 'nav-button hidden';
     backButton.id = "backButton";
-    backButton.textContent = '← Retour';
+    backButton.innerHTML = '<i class="material-icons">arrow_back</i>';
     backButton.addEventListener('click', function () {
         document.getElementById('stopListContainer').classList.add('hidden');
         backButton.classList.add('hidden');
+        favoritesButton?.classList?.remove('hidden');
         document.getElementById('lineSelector').classList.remove('hidden');
     });
-    document.body.insertBefore(backButton, document.body.firstChild);
+    document.getElementById('title-container').insertBefore(backButton, document.getElementById('title-container').firstChild);
 
-    const favoritesButton = document.createElement('div');
-    favoritesButton.className = 'back-button';
-    favoritesButton.textContent = '← Retour aux Favoris';
+    const favoritesButton = document.createElement('button');
+    favoritesButton.id = "favoritesButton";
+    favoritesButton.className = 'nav-button';
+    favoritesButton.innerHTML = '<i class="material-icons">arrow_back</i>';
     favoritesButton.addEventListener('click', function () {
         window.location.href = 'index.html';
     });
-    document.body.insertBefore(favoritesButton, document.body.firstChild);
+    document.getElementById('title-container').insertBefore(favoritesButton, document.getElementById('title-container').firstChild);
 });
 
 function loadFavorites() {
@@ -146,7 +148,8 @@ function populateLines(data) {
 
             const stopListContainer = document.getElementById('stopListContainer');
             stopListContainer.classList.remove('hidden');
-            backButton.classList.remove('hidden');
+            backButton?.classList?.remove('hidden');
+            favoritesButton?.classList.add('hidden');
             document.getElementById('lineSelector').classList.add('hidden');
 
             const stopListSubtitle = document.getElementById('stop-list-subtitle');
