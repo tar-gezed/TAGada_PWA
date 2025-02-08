@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter Favoris - Horaires Bus/Tram</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="manifest" href="./manifest.webmanifest">
     <meta name="theme-color" content="#d42e11">
@@ -59,6 +60,10 @@
             text-align: center;
         }
 
+        .line-circle-large {
+            min-width: 28px;
+        }
+
         .stop-list-subtitle-container {
             display: flex;
             align-items: center;
@@ -91,6 +96,8 @@
         .line-circle {
             width: 24px;
             height: 24px;
+            line-height: 24px;
+            font-size: 14px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -179,7 +186,7 @@
     <script src="options.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
+            navigator.serviceWorker.register('service-worker.js')
             .then(registration => {
                 console.log('Service Worker registered with scope:', registration.scope);
             })
